@@ -1,0 +1,22 @@
+{
+  "name": "the-employee-organizer-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbenne30/The-Employee-Organizer-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbenne30/The-Employee-Organizer-/issues"
+  },
+  "homepage": "https://github.com/rbenne30/The-Employee-Organizer-#readme"
+}
