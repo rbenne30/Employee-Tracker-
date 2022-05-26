@@ -16,4 +16,9 @@ inquirer
   ])
   .then(function (answers) {
     console.log(answers)
+    // .then((employee_db))
+    // res.json(employee_db);
+  // }) .catch((err) => {
+    // res.json(err);
+  // });
   })
