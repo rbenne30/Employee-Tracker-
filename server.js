@@ -1,18 +1,24 @@
-const express = require('express');
-const PORT = process.env.PORT || 3001;
-const app = express();
-// Express middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-
-// Default response for any other request (Not Found)
-app.use((req, res) => {
-    res.status(404).end();
-  });
-
-
-
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });  
+require('dotenv')
+const inquirer = require('inquirer')
+const mysql = require('mysql2/promise')
+inquirer
+  .prompt([
+    {
+      name: "department",
+      type: "input",
+      message: "What would you like to do?"
+    },
+    {
+      name: "doing",
+      type: "input",
+      message: "what is the name of the department?"
+    }
+  ])
+  .then(function (answers) {
+    console.log(answers)
+    // .then((employee_db))
+    // res.json(employee_db);
+  // }) .catch((err) => {
+    // res.json(err);
+  // });
+  })
