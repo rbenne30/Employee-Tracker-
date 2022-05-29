@@ -28,8 +28,8 @@ employee.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'gallery',
+    modelName: 'emloyee',
   }
 );
 
-module.exports = Gallery;
+module.exports = employee;
