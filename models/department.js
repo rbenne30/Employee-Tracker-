@@ -28,8 +28,8 @@ Gallery.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'gallery',
+    modelName: 'department',
   }
 );
 
-module.exports = Gallery;
+module.exports = Department;

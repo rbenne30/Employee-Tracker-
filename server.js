@@ -39,8 +39,8 @@ const promptLoop = (connection) => {
         message: "What would you like to do?",
         choices: [
           "View Departments",
-          "View Roles",
-          "View Employees",
+          "View Role",
+          "View Employee",
           "Add a Department",
           "Add a role",
           "Add an Employee",
@@ -57,12 +57,12 @@ const promptLoop = (connection) => {
         return connection.query("SELECT * FROM department")
           .then(displayResults)
       }
-      if (choice === "View Employees") {
-        return connection.query("SELECT * FROM employees")
+      if (choice === "View Employee") {
+        return connection.query("SELECT * FROM employee")
           .then(displayResults)
       }
-      if (choice === "View Roles") {
-        return connection.query("SELECT * FROM Roles")
+      if (choice === "View Role") {
+        return connection.query("SELECT * FROM Role")
           .then(displayResults)
       }
       
