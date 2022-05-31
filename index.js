@@ -65,7 +65,15 @@ const promptLoop = (connection) => {
         return connection.query("SELECT * FROM Role")
           .then(displayResults)
       }
-      
+      if (choice === "Add Department") {
+        // code missing here .....
+        return connection.query("TNSERT INTO department SET ?", department)
+          .then(displayResults)
+      }
+      if (choice === "Add Role") {
+        return connection.query("TNSERT INTO Role")
+          .then(displayResults)
+      }
     })
     .then((exit) => {
       if (!exit) {
