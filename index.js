@@ -165,14 +165,14 @@ const promptLoop = (connection) => {
             ])
             .then(queries.updateEmployee)
             .then((query) => connection.query(...query));
-        },
-    .then((exit) => {
-      if (exit) {
-        return;
-      }
-      return promptLoop(connection);
-    })
-  }
+                   })
+               }
+               if(choice === "Exit") {
+                 return
+               }
+             })
+         }
+  
 
 const queries = {
   getDepartments() {
