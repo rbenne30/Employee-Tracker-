@@ -71,7 +71,7 @@ const promptLoop = (connection) => {
                 {
                   type: "input",
                   name: "title",
-                  message: "What is the title of this role?"
+                  message: "What is the title of this new role?"
                 },
                 {
                   type: "number",
@@ -99,17 +99,17 @@ const promptLoop = (connection) => {
               {
                 type: "input",
                 name: "first_name",
-                message: "What is the title of this role?"
+                message: "What is employee's first name?"
               },
               {
                 type: "number",
                 name: "last_name",
-                message: "What is the salary of this role?"
+                message: "What is employee's last name?"
               },
               {
                 type: "list",
                 name: "manager_id",
-                message: "Which department is this role a part of?",
+                message: "Who is this employees manager?",
                 choices: [
                   ...employees.map(({ id, first_name, last_name }) => ({ name: first_name + " " + last_name, value: id })),
                   { name: "None", value: null }
@@ -130,7 +130,7 @@ const promptLoop = (connection) => {
               {
                 type: "list",
                 name: "id",
-                message: "Which role does this employee have?",
+                message: "Which employee's role would you like to update?",
                 choices: employees.map(({ id, first_name, last_name }) => ({ name: first_name + " " + last_name, value: id }))
               },
               {
@@ -142,17 +142,17 @@ const promptLoop = (connection) => {
               {
                 type: "input",
                 name: "first_name",
-                message: "What is the title of this role?"
+                message: "What is the employee's first_name?"
               },
               {
                 type: "number",
                 name: "last_name",
-                message: "What is the salary of this role?"
+                message: "What is the employee's last_name?"
               },
               {
                 type: "list",
                 name: "manager_id",
-                message: "Which department is this role a part of?",
+                message: "Who is the employee's manager?",
                 choices({ id: employeeId }) {
                   return [
                     ...employees
